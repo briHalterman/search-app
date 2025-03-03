@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Container, Carousel } from 'react-bootstrap';
+import SearchForm from './components/searchForm';
+import Results from './components/Results';
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Carousel>
+          <Container>
+            <h1>Search App</h1>
+            <p>This is a simple search app</p>
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <SearchForm />
+          </Container>
+        </Carousel>
+        <Results />
+      </div>
+    );
+  }
 }
 
 export default App;
